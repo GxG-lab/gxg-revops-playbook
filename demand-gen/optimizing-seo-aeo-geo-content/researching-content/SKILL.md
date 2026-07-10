@@ -5,8 +5,8 @@ status: active
 domain: demand-gen
 type: capability-uplift
 tags: [demand-gen, #analysis, #process, #playbook, #p1]
-version: 1.0.0
-updated: 2026-06-29
+version: 1.0.1
+updated: 2026-06-30
 author: GxG
 allowed-tools: Read, WebSearch
 ---
@@ -21,7 +21,7 @@ Activate when:
 - A user wants to prepare a Russian SEO/AEO/GEO article and needs research before writing
 - A topic depends on current market context, tools, salary data, legal or financial claims, or 2026 trends
 - A draft needs sources, examples, FAQ angles, or risky claims identified before publication
-- A content workflow needs a handoff brief for `architecting-articles`, `writing-articles`, or `optimizing-seo-aeo-geo-content`
+- A content workflow needs a handoff brief for `architecting-articles`, `writing-articles`, or `editing-seo-aeo-geo-content`
 
 Do NOT use when: the user already has a verified brief and only needs structure, writing, editing, or final audit.
 
@@ -132,7 +132,7 @@ This skill does NOT:
 - Write the article draft
 - Build the final article outline
 - Invent statistics, rankings, salaries, or market claims
-- Replace `optimizing-seo-aeo-geo-content` for editing an existing draft
+- Replace `editing-seo-aeo-geo-content` for editing an existing draft
 - Replace `auditing-content-quality` for final publication readiness checks
 
 ---
@@ -150,3 +150,4 @@ This skill does NOT:
 | Version | Date | Change |
 |---------|------|--------|
 | 1.0.0 | 2026-06-29 | Initial production import from GxG content skills |
+| 1.0.1 | 2026-06-30 | Updated references after nesting under composite SEO/AEO/GEO content workflow |

@@ -1,139 +1,89 @@
 ---
 name: optimizing-seo-aeo-geo-content
-description: "Edits Russian article drafts for SEO, AEO, and GEO visibility while preserving human usefulness, GxG voice, answer-first structure, entities, citations, internal links, FAQ, schema candidates, and natural readability. Use when optimizing article drafts, improving answer-engine readiness, editing GEO content, preparing SEO metadata, or when user mentions \"SEO редактура\", \"AEO\", \"GEO\", \"answer engine\", \"meta title\", \"schema\", \"внутренние ссылки\"."
+description: "Runs the full Russian SEO/AEO/GEO content workflow from research to publication-readiness audit: research brief, article architecture, drafting, SEO/AEO/GEO editing, and final quality review. Use when the user asks for a complete content production process, an end-to-end article workflow, or mentions \"SEO/AEO/GEO контент\", \"полный цикл статьи\", \"ресерч, структура, текст, оптимизация и аудит\"."
 status: active
 domain: demand-gen
-type: capability-uplift
-tags: [demand-gen, #process, #analysis, #playbook, #p1]
+type: workflow
+tags: [demand-gen, #workflow, #process, #playbook, #p1]
 version: 1.0.0
-updated: 2026-06-29
+updated: 2026-06-30
 author: GxG
-allowed-tools: Read
+allowed-tools: Read, WebSearch
 ---
 
 # Optimizing SEO AEO GEO Content
 
-Improves an existing Russian article draft for search engines, answer engines, and generative answer extraction without making the text robotic.
+Coordinates the complete Russian SEO/AEO/GEO article workflow. This is a composite skill: use the nested skills for specific steps, or run them in sequence when the task requires the full content pipeline.
 
 ## When to Use This Skill
 
 Activate when:
-- A user has a draft and wants SEO/AEO/GEO editing
-- Headings, definitions, FAQ, citations, schema ideas, or internal links need improvement
-- The article should become easier to cite, summarize, and extract into AI-generated answers
-- The user needs metadata, slug, FAQ schema candidates, or a precise edit plan
+- The user wants a complete SEO/AEO/GEO content workflow, not just one editing step
+- A topic needs to become a researched, structured, drafted, optimized, and audited Russian article
+- The request spans multiple stages such as research, outline, writing, metadata, FAQ, schema candidates, and publication readiness
+- The user asks to fix or manage the full article process
 
-Do NOT use when: there is no draft yet, the task is pure research, or the user needs final publication audit rather than editing.
+Do NOT use when the user clearly asks for only one step. In that case, use the relevant nested skill directly.
+
+---
+
+## Nested Skills
+
+| Step | Skill | Purpose |
+|------|-------|---------|
+| 1 | [researching-content](researching-content/SKILL.md) | Build the research brief, intent map, facts, source notes, and risky-claim list |
+| 2 | [architecting-articles](architecting-articles/SKILL.md) | Turn the brief into a GxG-style article outline |
+| 3 | [writing-articles](writing-articles/SKILL.md) | Draft the Russian long-form article from the approved outline |
+| 4 | [editing-seo-aeo-geo-content](editing-seo-aeo-geo-content/SKILL.md) | Edit the draft for SEO, AEO, GEO, metadata, FAQ, internal links, and extractable structure |
+| 5 | [auditing-content-quality](auditing-content-quality/SKILL.md) | Run the final publication-readiness audit |
 
 ---
 
 ## Workflow
 
-| Workflow | Trigger | Steps |
-|----------|---------|-------|
-| **Full edit** | "edit this article" / "отредактируй под SEO/AEO/GEO" | See §Full Edit |
-| **Edit plan** | "tell me what to fix" / "дай план правок" | See §Edit Plan |
+### Full Content Pipeline
 
----
+1. Use `researching-content` to define reader job, search intent, verified facts, source-backed examples, SEO/AEO/GEO opportunities, and risky claims.
+2. Use `architecting-articles` to create the article structure, `Коротко` block, tables, checklist, FAQ, and writer notes.
+3. Use `writing-articles` to produce the draft in Russian with practical examples, natural GxG voice, and cautious claims.
+4. Use `editing-seo-aeo-geo-content` to improve headings, answer-first sections, metadata, FAQ schema candidates, internal links, and extractability.
+5. Use `auditing-content-quality` to decide whether the article is ready to publish and list remaining fixes.
 
-## Instructions
+### Partial Pipeline
 
-### Full Edit
-
-1. Identify the primary intent and check whether the article answers it in the first 150-250 words.
-2. Improve H1/H2/H3 headings so they match real reader questions and article promises.
-3. Add answer-first paragraphs to definition, comparison, process, and FAQ sections.
-4. Ensure key entities, tools, concepts, roles, and metrics are named consistently.
-5. Add or improve:
-   - Comparison table
-   - Checklist
-   - FAQ
-   - Mistakes section
-   - Tools or resources section
-   - Date-sensitive caveats
-6. Strengthen evidence quality through:
-   - Source-backed claims
-   - Clear limits
-   - Examples
-   - Transparent uncertainty
-   - No fake expertise or unsupported authority
-7. Suggest internal links and schema markup only when supported by visible page content.
-8. Produce an edited version plus notes, unless the user asks only for an edit plan.
-
-### Edit Plan
-
-1. Review the article against SEO, AEO, GEO, evidence, and readability criteria.
-2. Group recommendations into critical, important, and optional changes.
-3. Include specific replacement examples for headings, definitions, FAQ, metadata, and unsupported claims.
-4. Avoid rewriting the whole article unless asked.
+If the user already has an artifact from an earlier stage, start from the next relevant nested skill:
+- Verified brief exists -> start with `architecting-articles`
+- Approved outline exists -> start with `writing-articles`
+- Draft exists -> start with `editing-seo-aeo-geo-content`
+- Near-final article exists -> start with `auditing-content-quality`
 
 ---
 
 ## Output Format
 
-For full editing:
+For a full pipeline, produce staged outputs rather than merging all decisions into one block:
 
 ```markdown
-# Edited Article
+# Research Brief
 
-...
+# Article Outline
 
-# SEO/AEO/GEO Notes
+# Draft Article
 
-## Meta Title
-## Meta Description
-## Suggested Slug
-## FAQ Schema Candidates
-## Internal Link Ideas
-## Claims To Verify
+# SEO/AEO/GEO Edit Notes
+
+# Content Audit
 ```
-
----
-
-## Examples
-
-### Example 1: Full GEO Edit
-
-**Input / Context:**
-A Russian draft about "AI search optimization" has generic headings, no FAQ, and several unsupported claims about traffic growth.
-
-**Output:**
-An edited article with clearer H2s, direct definitions, a comparison table, self-contained FAQ answers, softer wording for unsupported traffic claims, metadata, slug, schema candidates, and a claims-to-verify list.
-
----
-
-### Example 2: Edit Plan Only
-
-**Input / Context:**
-The user asks for an SEO/AEO/GEO plan without rewriting the article.
-
-**Output:**
-A prioritized edit plan covering early answer quality, heading rewrites, missing entities, FAQ gaps, internal links, schema candidates, and risky claims.
-
----
-
-## Reference
-
-- Editor checklist: [docs/editor-checklist.md](docs/editor-checklist.md)
 
 ---
 
 ## Out of Scope
 
-This skill does NOT:
-- Keyword-stuff articles
-- Add unsupported statistics, claims, or fake expertise
-- Suggest structured data that is not supported by visible content
-- Replace source research for time-sensitive claims
-- Replace `auditing-content-quality` for final publication readiness
-
----
-
-## Import Notes
-
-- Source: `_input/gxg-aeo-seo-geo-content-skills/seo-aeo-geo-editor/SKILL.md`
-- Adapted: 2026-06-29
-- Changes: normalized slug, mapped to `demand-gen`, added edit-plan workflow, examples, and stricter publication-safety boundaries.
+This composite skill does NOT:
+- Replace the nested skills' detailed instructions
+- Invent facts, metrics, sources, rankings, salaries, or search performance claims
+- Force the full workflow when the user only needs one stage
+- Guarantee traffic, citations, rankings, conversion, or AI answer inclusion
 
 ---
 
@@ -141,4 +91,4 @@ This skill does NOT:
 
 | Version | Date | Change |
 |---------|------|--------|
-| 1.0.0 | 2026-06-29 | Initial production import from GxG content skills |
+| 1.0.0 | 2026-06-30 | Converted from single editor skill into composite SEO/AEO/GEO content workflow |
