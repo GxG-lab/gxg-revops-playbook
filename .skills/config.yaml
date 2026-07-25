@@ -1,5 +1,8 @@
 # GxG RevOps Playbook — Shared Configuration
-# Single source of truth for all curator settings.
+# Single source of truth for the Playbook's curator settings and skill taxonomy.
+# The `domains` map below is authoritative for Playbook folders, domain tags,
+# coverage targets, and priority skills. Do not derive those from README.md,
+# INDEX.md, or the local KB domain-tree snapshot.
 # Read by: audit.py, index.md, lifecycle.md, any LLM executing curator workflows.
 
 playbook_root: "."  # relative to repo root

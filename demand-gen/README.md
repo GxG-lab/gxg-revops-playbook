@@ -14,6 +14,7 @@ This domain now includes a composite Russian SEO/AEO/GEO content workflow: resea
 | [optimizing-seo-aeo-geo-content/writing-articles](optimizing-seo-aeo-geo-content/writing-articles/SKILL.md) | active | Drafts Russian long-form articles in the GxG voice |
 | [optimizing-seo-aeo-geo-content/editing-seo-aeo-geo-content](optimizing-seo-aeo-geo-content/editing-seo-aeo-geo-content/SKILL.md) | active | Edits drafts for SEO, AEO, GEO, metadata, FAQ, and extractable structure |
 | [optimizing-seo-aeo-geo-content/auditing-content-quality](optimizing-seo-aeo-geo-content/auditing-content-quality/SKILL.md) | active | Runs final publication-readiness checks |
+| [generating-ugc-ads](generating-ugc-ads/SKILL.md) | draft | Produces research-grounded UGC video-ad concepts and production-ready prompt packs |
 
 ## Key Metrics
 

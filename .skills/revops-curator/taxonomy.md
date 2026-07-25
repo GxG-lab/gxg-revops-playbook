@@ -2,7 +2,18 @@
 
 Canonical reference for domains, slugs, tags, naming rules, and coverage targets.
 Every skill in the playbook must conform to this taxonomy.
-Coverage targets are also in `.skills/config.yaml` — that file is the machine-readable source of truth.
+
+## Sources of Truth
+
+Use the source that matches the decision being made:
+
+| Decision | Source of truth | Do not use instead |
+|---|---|---|
+| Playbook domain, folder, domain tag, coverage target, or priority skill | [`.skills/config.yaml`](../config.yaml), `domains` | `README.md`, `INDEX.md`, or a KB taxonomy tree |
+| Human-readable explanation of the Playbook taxonomy | This file | A duplicate domain list elsewhere |
+| KB topic tag or placement in the shared knowledge base | `/Users/dk1/go/Hermes/skills/knowledge-base/config/kb-architecture/domain_tree.yaml` | The Playbook's folder taxonomy |
+
+`.skills/revops-curator/config/kb-architecture/domain_tree.yaml` is a local reference snapshot of the KB tree, not an SSOT. Do not edit it to change Playbook domains or KB taxonomy. The Playbook's broader RevOps taxonomy intentionally includes domains such as Customer Success, Pricing, and Territory that do not need to be duplicated in the KB tree.
 
 ---
 

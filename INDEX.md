@@ -2,7 +2,7 @@
 
 > **Auto-maintained by `gxg-revops-curator` skill.** Run `/gxg-revops-curator` and say "update index" to refresh.
 
-**Last updated:** 2026-06-29
+**Last updated:** 2026-07-24
 **Total skills:** 9 active / 56 target
 **Overall coverage:** 16%
 
@@ -45,6 +45,7 @@
 |-------|--------|------|-------------|
 | [architecting-articles](demand-gen/architecting-articles/SKILL.md) | active | #template #process #playbook #p1 | Designs GxG-style Russian long-form article outlines from research briefs |
 | [auditing-content-quality](demand-gen/auditing-content-quality/SKILL.md) | active | #analysis #process #reporting #p1 | Audits Russian SEO/AEO/GEO articles for publication readiness and factual safety |
+| [generating-ugc-ads](demand-gen/generating-ugc-ads/SKILL.md) | draft | #analysis #template #playbook #p1 | Creates research-grounded UGC video-ad concepts and generation-ready prompt packs |
 | [optimizing-seo-aeo-geo-content](demand-gen/optimizing-seo-aeo-geo-content/SKILL.md) | active | #process #analysis #playbook #p1 | Edits Russian article drafts for SEO, AEO, GEO, metadata, FAQ, and extractable structure |
 | [researching-content](demand-gen/researching-content/SKILL.md) | active | #analysis #process #playbook #p1 | Builds research briefs for Russian SEO/AEO/GEO articles before outlining or drafting |
 | [writing-articles](demand-gen/writing-articles/SKILL.md) | active | #template #playbook #process #p1 | Writes Russian long-form article drafts in the GxG voice from approved outlines |
